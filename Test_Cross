@@ -1,2 +1,4 @@
-#Test_Cress
-Hi This is a sample file in Fork repository
+test:
+  override:
+    - mkdir -p $CIRCLE_TEST_REPORTS/cucumber
+    - bundle exec cucumber --format json --out $CIRCLE_TEST_REPORTS/cucumber/tests.cucumber
